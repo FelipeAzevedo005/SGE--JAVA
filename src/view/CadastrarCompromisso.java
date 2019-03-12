@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 package view;
-
+import interfaces.ICadastro;
 /**
  *
  * @author gu_az
  */
-public class CadastrarCompromisso extends javax.swing.JFrame {
-
+public class CadastrarCompromisso extends javax.swing.JFrame implements ICadastro {
+    
+    
+   
     /**
      * Creates new form CadastrarCompromisso
      */
@@ -67,6 +69,11 @@ public class CadastrarCompromisso extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("Limpar campos");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Enviar");
 
@@ -149,6 +156,11 @@ public class CadastrarCompromisso extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -202,4 +214,14 @@ public class CadastrarCompromisso extends javax.swing.JFrame {
     private javax.swing.JTextField ruaCompromisso;
     private javax.swing.JTextField tipoCompromisso;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void cadastrarPessoa() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void limparCampos() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
