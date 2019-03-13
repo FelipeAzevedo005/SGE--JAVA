@@ -48,6 +48,13 @@ public class TelaInicial extends javax.swing.JFrame {
         jMenu7 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                formInputMethodTextChanged(evt);
+            }
+        });
 
         jPanel2.setLayout(new java.awt.CardLayout());
 
@@ -232,6 +239,10 @@ public class TelaInicial extends javax.swing.JFrame {
         
         new CadastroReceitas().setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void formInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_formInputMethodTextChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formInputMethodTextChanged
 
     /**
      * @param args the command line arguments

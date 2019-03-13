@@ -5,6 +5,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author gu_az
@@ -67,6 +69,27 @@ public class CadastroApoiadores extends javax.swing.JFrame {
         jLabel12.setText("Telefone:");
 
         jLabel3.setText("Idade:");
+
+        idadeApoiador.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                idadeApoiadorInputMethodTextChanged(evt);
+            }
+        });
+        idadeApoiador.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                idadeApoiadorPropertyChange(evt);
+            }
+        });
+        idadeApoiador.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                idadeApoiadorKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                idadeApoiadorKeyTyped(evt);
+            }
+        });
 
         jLabel13.setText("Email:");
 
@@ -141,7 +164,7 @@ public class CadastroApoiadores extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
                                 .addComponent(apelidoApoiador, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(6, 6, Short.MAX_VALUE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel3)
@@ -216,6 +239,34 @@ public class CadastroApoiadores extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void idadeApoiadorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idadeApoiadorKeyTyped
+        // TODO add your handling code here:
+        /*try {
+            
+            int i = Integer.parseInt(idadeApoiador.getText());
+        } catch (NumberFormatException e) {
+            idadeApoiador.setText("");
+        }*/
+    }//GEN-LAST:event_idadeApoiadorKeyTyped
+
+    private void idadeApoiadorInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_idadeApoiadorInputMethodTextChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_idadeApoiadorInputMethodTextChanged
+
+    private void idadeApoiadorPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_idadeApoiadorPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idadeApoiadorPropertyChange
+
+    private void idadeApoiadorKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idadeApoiadorKeyReleased
+        try {
+            
+            int i = Integer.parseInt(idadeApoiador.getText());
+        } catch (NumberFormatException e) {
+            idadeApoiador.setText("");
+        }
+    }//GEN-LAST:event_idadeApoiadorKeyReleased
 
     /**
      * @param args the command line arguments
