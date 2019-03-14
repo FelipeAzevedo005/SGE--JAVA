@@ -16,13 +16,17 @@ import interfaces.ICadastro;
 public class Administrador extends Pessoa implements ICadastro {
     private String cpf;
     private int numeroCandidatura;
-
+    private String cargoPolitico;
+    private String senha;
+    
     public Administrador(String nome, String dataNascimento, String telefone, 
             String email, String apelido, Endereco endereco, String cpf, 
-            int numeroCandidatura) {
+            int numeroCandidatura, String cargoPolitico, String senha) {
         super(nome, dataNascimento, telefone, email, apelido, endereco);
         this.cpf = cpf;
         this.numeroCandidatura = numeroCandidatura;
+        this.cargoPolitico = cargoPolitico;
+        this.senha = senha;
     }
    
     public String getCpf() {
@@ -56,8 +60,6 @@ public class Administrador extends Pessoa implements ICadastro {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    private String cargoPolitico;
-    private String senha;
 
     @Override
     public void cadastrarDados() {

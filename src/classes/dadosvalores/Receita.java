@@ -24,8 +24,6 @@ public class Receita implements ICadastro{
         this.dataPagamento = dataPagamento;
     }
     
-    
-
     public String getNumeroDocumento() {
         return numeroDocumento;
     }

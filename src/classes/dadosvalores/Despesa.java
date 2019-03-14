@@ -10,10 +10,10 @@ package classes.dadosvalores;
  *
  * @author felipe
  */
-public class Despesas extends Receita {
+public class Despesa extends Receita {
     private String descricao;
 
-    public Despesas(String nome, String numeroDocumento, double valor, 
+    public Despesa(String nome, String numeroDocumento, double valor, 
             String dataPagamento, String descricao) {
         super(nome, numeroDocumento, valor, dataPagamento);
         this.descricao = descricao;

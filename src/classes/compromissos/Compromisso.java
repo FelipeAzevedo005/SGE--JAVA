@@ -24,8 +24,6 @@ public class Compromisso implements ICadastro{
         this.responsavel = responsavel;
     }
     
-    
-
     public Endereco getEndereco() {
         return endereco;
     }

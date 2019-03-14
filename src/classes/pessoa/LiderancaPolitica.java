@@ -27,10 +27,6 @@ public class LiderancaPolitica extends Apoiador {
         this.potencialVotos = potencialVotos;
     }
 
-   
-
-    
-
     public double getSalario() {
         return salario;
     }

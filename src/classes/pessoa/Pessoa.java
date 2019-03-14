@@ -14,6 +14,10 @@ import interfaces.ICadastro;
 public abstract class Pessoa implements ICadastro {
     private String nome;
     private String dataNascimento;
+    private String telefone;
+    private String email;
+    private String apelido;
+    private Endereco endereco;
 
     public Pessoa(String nome, String dataNascimento, String telefone, String email, String apelido, Endereco endereco) {
         this.nome = nome;
@@ -23,11 +27,7 @@ public abstract class Pessoa implements ICadastro {
         this.apelido = apelido;
         this.endereco = endereco;
     }
-    private String telefone;
-    private String email;
-    private String apelido;
-    private Endereco endereco;
-
+    
     public String getNome() {
         return nome;
     }
