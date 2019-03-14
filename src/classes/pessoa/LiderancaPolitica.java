@@ -7,13 +7,12 @@ package classes.pessoa;
 
 import classes.dadoseleitorais.DadosEleitorais;
 import classes.endereco.Endereco;
-import interfaces.ICadastro;
 
 /**
  *
  * @author felipe
  */
-public class LiderancaPolitica extends Apoiador implements ICadastro {
+public class LiderancaPolitica extends Apoiador {
     private double salario;
     private int potencialVotos;
 

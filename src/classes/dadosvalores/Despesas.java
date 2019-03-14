@@ -5,14 +5,12 @@
  */
 package classes.dadosvalores;
 
-import interfaces.ICadastro;
-
 
 /**
  *
  * @author felipe
  */
-public class Despesas extends Receita implements ICadastro {
+public class Despesas extends Receita {
     private String descricao;
 
     public Despesas(String nome, String numeroDocumento, double valor, 
