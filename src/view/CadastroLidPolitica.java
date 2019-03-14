@@ -46,7 +46,7 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
         nomeLider = new javax.swing.JTextField();
         bairroLider = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        limparCampos = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         secaoLider = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -88,7 +88,12 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
 
         jLabel2.setText("Apelido:");
 
-        jButton2.setText("Limpar campos");
+        limparCampos.setText("Limpar campos");
+        limparCampos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limparCamposActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Seção Eleitoral:");
 
@@ -130,7 +135,7 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
                         .addComponent(emailLider)
                         .addComponent(jScrollPane1)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jButton2)
+                            .addComponent(limparCampos)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton1))
                         .addGroup(layout.createSequentialGroup()
@@ -170,7 +175,7 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
                                         .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(filiacaoLider)))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(potencialLider)
                                         .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))))
@@ -238,13 +243,30 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(limparCampos))
                 .addGap(30, 30, 30))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void limparCamposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparCamposActionPerformed
+        nomeLider.setText("");
+        apelidoLider.setText("");
+        idadeLider.setText("");
+        emailLider.setText("");
+        descricaoLider.setText("");
+        secaoLider.setText("");
+        zonaLider.setText("");
+        filiacaoLider.setText("");
+        ruaLider.setText("");
+        casaLider.setText("");
+        bairroLider.setText("");
+        telefoneLider.setText("");
+        salLider.setText("");
+        potencialLider.setText("");
+    }//GEN-LAST:event_limparCamposActionPerformed
 
     /**
      * @param args the command line arguments
@@ -290,7 +312,6 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
     private javax.swing.JTextField filiacaoLider;
     private javax.swing.JTextField idadeLider;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -307,6 +328,7 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton limparCampos;
     private javax.swing.JTextField nomeLider;
     private javax.swing.JTextField potencialLider;
     private javax.swing.JTextField ruaLider;

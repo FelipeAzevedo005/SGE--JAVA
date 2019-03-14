@@ -42,8 +42,8 @@ public class CadastrarCompromisso extends javax.swing.JFrame implements ICadastr
         responsavelCompromisso = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        descricaoCompromisso = new javax.swing.JTextArea();
+        limparCampos = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -64,14 +64,14 @@ public class CadastrarCompromisso extends javax.swing.JFrame implements ICadastr
 
         jLabel7.setText("Descrição:");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        descricaoCompromisso.setColumns(20);
+        descricaoCompromisso.setRows(5);
+        jScrollPane1.setViewportView(descricaoCompromisso);
 
-        jButton1.setText("Limpar campos");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        limparCampos.setText("Limpar campos");
+        limparCampos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                limparCamposActionPerformed(evt);
             }
         });
 
@@ -93,7 +93,7 @@ public class CadastrarCompromisso extends javax.swing.JFrame implements ICadastr
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(limparCampos)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton2))
                             .addComponent(responsavelCompromisso)
@@ -147,7 +147,7 @@ public class CadastrarCompromisso extends javax.swing.JFrame implements ICadastr
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(limparCampos)
                     .addComponent(jButton2))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
@@ -156,10 +156,14 @@ public class CadastrarCompromisso extends javax.swing.JFrame implements ICadastr
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void limparCamposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparCamposActionPerformed
+        tipoCompromisso.setText("");
+        ruaCompromisso.setText("");
+        bairroCompromisso.setText("");
+        municipioCompromisso.setText("");
+        responsavelCompromisso.setText("");
+        descricaoCompromisso.setText("");
+    }//GEN-LAST:event_limparCamposActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,7 +202,7 @@ public class CadastrarCompromisso extends javax.swing.JFrame implements ICadastr
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField bairroCompromisso;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JTextArea descricaoCompromisso;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -208,7 +212,7 @@ public class CadastrarCompromisso extends javax.swing.JFrame implements ICadastr
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton limparCampos;
     private javax.swing.JTextField municipioCompromisso;
     private javax.swing.JTextField responsavelCompromisso;
     private javax.swing.JTextField ruaCompromisso;

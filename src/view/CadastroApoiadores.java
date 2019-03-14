@@ -44,8 +44,8 @@ public class CadastroApoiadores extends javax.swing.JFrame {
         emailApoiador = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        DescricaoApoiador = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
+        descricaoApoiador = new javax.swing.JTextArea();
+        limparCampos = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         secaoApoiador = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -76,11 +76,16 @@ public class CadastroApoiadores extends javax.swing.JFrame {
 
         jButton1.setText("Enviar");
 
-        DescricaoApoiador.setColumns(20);
-        DescricaoApoiador.setRows(5);
-        jScrollPane1.setViewportView(DescricaoApoiador);
+        descricaoApoiador.setColumns(20);
+        descricaoApoiador.setRows(5);
+        jScrollPane1.setViewportView(descricaoApoiador);
 
-        jButton2.setText("Limpar campos");
+        limparCampos.setText("Limpar campos");
+        limparCampos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limparCamposActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Seção Eleitoral:");
 
@@ -143,7 +148,7 @@ public class CadastroApoiadores extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
                                 .addComponent(apelidoApoiador, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(12, 12, Short.MAX_VALUE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel3)
@@ -152,7 +157,7 @@ public class CadastroApoiadores extends javax.swing.JFrame {
                         .addComponent(emailApoiador)
                         .addComponent(jScrollPane1)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jButton2)
+                            .addComponent(limparCampos)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton1))))
                 .addGap(120, 120, 120))
@@ -211,13 +216,28 @@ public class CadastroApoiadores extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(limparCampos))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void limparCamposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparCamposActionPerformed
+        nomeApoiador.setText("");
+        apelidoApoiador.setText("");
+        idadeApoiador.setText("");
+        emailApoiador.setText("");
+        descricaoApoiador.setText("");
+        secaoApoiador.setText("");
+        zonaApoiador.setText("");
+        filiacaoApoiador.setText("");
+        ruaApoiador.setText("");
+        casaApoiador.setText("");
+        bairroApoiador.setText("");
+        TelefoneApoiador.setText("");
+    }//GEN-LAST:event_limparCamposActionPerformed
 
     /**
      * @param args the command line arguments
@@ -256,16 +276,15 @@ public class CadastroApoiadores extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea DescricaoApoiador;
     private javax.swing.JTextField TelefoneApoiador;
     private javax.swing.JTextField apelidoApoiador;
     private javax.swing.JTextField bairroApoiador;
     private javax.swing.JTextField casaApoiador;
+    private javax.swing.JTextArea descricaoApoiador;
     private javax.swing.JTextField emailApoiador;
     private javax.swing.JTextField filiacaoApoiador;
     private javax.swing.JTextField idadeApoiador;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -280,6 +299,7 @@ public class CadastroApoiadores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton limparCampos;
     private javax.swing.JTextField nomeApoiador;
     private javax.swing.JTextField ruaApoiador;
     private javax.swing.JTextField secaoApoiador;

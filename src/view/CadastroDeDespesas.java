@@ -38,7 +38,7 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
         valorDespesa = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         dataDespesa = new javax.swing.JFormattedTextField();
-        jButton1 = new javax.swing.JButton();
+        limparCampos = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -70,7 +70,12 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
 
         jLabel4.setText("Data:");
 
-        jButton1.setText("Limpar campos");
+        limparCampos.setText("Limpar campos");
+        limparCampos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limparCamposActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Enviar");
 
@@ -94,7 +99,7 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
                                     .addComponent(valorDespesa, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton1))
+                                    .addComponent(limparCampos))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(50, 50, 50)
@@ -129,7 +134,7 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
                     .addComponent(dataDespesa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(limparCampos)
                     .addComponent(jButton2))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
@@ -137,6 +142,13 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void limparCamposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparCamposActionPerformed
+        descricaoDespesa.setText("");
+        cpfCnpjBeneficiario.setText("");
+        valorDespesa.setText("");
+        dataDespesa.setText("");
+    }//GEN-LAST:event_limparCamposActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,7 +189,6 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
     private javax.swing.JTextField cpfCnpjBeneficiario;
     private javax.swing.JFormattedTextField dataDespesa;
     private javax.swing.JTextArea descricaoDespesa;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -186,6 +197,7 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton limparCampos;
     private javax.swing.JTextField valorDespesa;
     // End of variables declaration//GEN-END:variables
 }
