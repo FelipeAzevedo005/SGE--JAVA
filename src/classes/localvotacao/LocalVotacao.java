@@ -18,6 +18,15 @@ public class LocalVotacao implements ICadastro{
     private String nomeLocal;
     private int qtdEleitores;
 
+    public LocalVotacao(Endereco endereco, DadosEleitorais dadosEleitorais, String nomeLocal, int qtdEleitores) {
+        this.endereco = endereco;
+        this.dadosEleitorais = dadosEleitorais;
+        this.nomeLocal = nomeLocal;
+        this.qtdEleitores = qtdEleitores;
+    }
+    
+    
+
     public Endereco getEndereco() {
         return endereco;
     }

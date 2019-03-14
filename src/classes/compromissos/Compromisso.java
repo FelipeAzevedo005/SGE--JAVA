@@ -17,6 +17,15 @@ public class Compromisso implements ICadastro{
     private String descricao;
     private String responsavel;
 
+    public Compromisso(Endereco endereco, String tipoCompromisso, String descricao, String responsavel) {
+        this.endereco = endereco;
+        this.tipoCompromisso = tipoCompromisso;
+        this.descricao = descricao;
+        this.responsavel = responsavel;
+    }
+    
+    
+
     public Endereco getEndereco() {
         return endereco;
     }

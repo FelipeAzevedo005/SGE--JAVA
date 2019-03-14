@@ -282,8 +282,13 @@ public class CadastroApoiadores extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_zonaApoiadorKeyReleased
 
+    //PRECISO IMPLEMENTAR ESSE CÓDIGO AINDA
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+        /*Apoiador apoiador = new Apoiador(passar argumentos);
+        apoiador.cadastrarDados();
+        código para limpar dados;*/
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
