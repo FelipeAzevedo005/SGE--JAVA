@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package classes.locaisvotacao;
+package classes.localvotacao;
 import classes.endereco.Endereco;
 import classes.dadoseleitorais.DadosEleitorais;
 import interfaces.ICadastro;
@@ -12,7 +12,7 @@ import interfaces.ICadastro;
  *
  * @author felipe
  */
-public class LocaisVotacao implements ICadastro{
+public class LocalVotacao implements ICadastro{
     private Endereco endereco;
     private DadosEleitorais dadosEleitorais;
     private String nomeLocal;

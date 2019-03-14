@@ -5,13 +5,32 @@
  */
 package classes.pessoa;
 
+import classes.dadoseleitorais.DadosEleitorais;
+import classes.endereco.Endereco;
+import interfaces.ICadastro;
+
 /**
  *
  * @author felipe
  */
-public class LiderancaPolitica extends Pessoa {
+public class LiderancaPolitica extends Apoiador implements ICadastro {
     private double salario;
-    private int pontencialVostos;
+    private int potencialVotos;
+
+    public LiderancaPolitica(String nome, String dataNascimento, String telefone, 
+            String email, String apelido, Endereco endereco, String descricaoPessoal, 
+            String filiacaoPartidaria, DadosEleitorais dadosEleitorais, 
+            double salario, int potencialVotos) {
+        
+        super(nome, dataNascimento, telefone, email, apelido, endereco, 
+                descricaoPessoal, filiacaoPartidaria, dadosEleitorais);
+        this.salario = salario;
+        this.potencialVotos = potencialVotos;
+    }
+
+   
+
+    
 
     public double getSalario() {
         return salario;
@@ -21,12 +40,12 @@ public class LiderancaPolitica extends Pessoa {
         this.salario = salario;
     }
 
-    public int getPontencialVostos() {
-        return pontencialVostos;
+    public int getPotencialVotos() {
+        return potencialVotos;
     }
 
-    public void setPontencialVostos(int pontencialVostos) {
-        this.pontencialVostos = pontencialVostos;
+    public void setPotencialVotos(int potencialVotos) {
+        this.potencialVotos = potencialVotos;
     }
 
     @Override

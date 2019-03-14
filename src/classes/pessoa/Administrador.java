@@ -6,22 +6,25 @@
 package classes.pessoa;
 
 import classes.endereco.Endereco;
+import interfaces.ICadastro;
 
 
 /**
  *
  * @author felipe
  */
-public class Administrador extends Pessoa {
+public class Administrador extends Pessoa implements ICadastro {
     private String cpf;
     private int numeroCandidatura;
 
-    public Administrador(String nome, String dataNascimento, String telefone, String email, String apelido, Endereco endereco) {
+    public Administrador(String nome, String dataNascimento, String telefone, 
+            String email, String apelido, Endereco endereco, String cpf, 
+            int numeroCandidatura) {
         super(nome, dataNascimento, telefone, email, apelido, endereco);
+        this.cpf = cpf;
+        this.numeroCandidatura = numeroCandidatura;
     }
-    
-    
-
+   
     public String getCpf() {
         return cpf;
     }

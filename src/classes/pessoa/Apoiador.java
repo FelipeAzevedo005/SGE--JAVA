@@ -6,14 +6,13 @@
 package classes.pessoa;
 import classes.dadoseleitorais.DadosEleitorais;
 import classes.endereco.Endereco;
+import interfaces.ICadastro;
 
 /**
  *
  * @author felipe
  */
-public class Apoiador extends Pessoa {
-    
-    
+public class Apoiador extends Pessoa implements ICadastro{
     
     private String descricaoPessoal;
     private String filiacaoPartidaria;
@@ -23,6 +22,7 @@ public class Apoiador extends Pessoa {
             String email, String apelido, Endereco endereco, 
             String descricaoPessoal, String filiacaoPartidaria,
             DadosEleitorais dadosEleitorais) {
+       
         super(nome, dataNascimento, telefone, email, apelido, endereco);
         this.descricaoPessoal = descricaoPessoal;
         this.filiacaoPartidaria = filiacaoPartidaria;
