@@ -73,6 +73,12 @@ public class CadastroLocalVotacao extends javax.swing.JFrame {
 
         jLabel5.setText("Zona eleitoral:");
 
+        zonaLocal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                zonaLocalKeyReleased(evt);
+            }
+        });
+
         jLabel7.setText("Seção eleitoral:");
 
         secaoLocal.addActionListener(new java.awt.event.ActionListener() {
@@ -80,8 +86,19 @@ public class CadastroLocalVotacao extends javax.swing.JFrame {
                 secaoLocalActionPerformed(evt);
             }
         });
+        secaoLocal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                secaoLocalKeyReleased(evt);
+            }
+        });
 
         jLabel8.setText("Quantidade de eleitores:");
+
+        qtdEleitoresLocal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                qtdEleitoresLocalKeyReleased(evt);
+            }
+        });
 
         jButton1.setText("Enviar");
 
@@ -188,6 +205,33 @@ public class CadastroLocalVotacao extends javax.swing.JFrame {
         secaoLocal.setText("");
         qtdEleitoresLocal.setText("");
     }//GEN-LAST:event_limparCamposActionPerformed
+
+    private void zonaLocalKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_zonaLocalKeyReleased
+        // TODO add your handling code here:
+        try {
+            int zonaL = Integer.parseInt(zonaLocal.getText());
+        } catch (NumberFormatException e) {
+            zonaLocal.setText("");
+        }
+    }//GEN-LAST:event_zonaLocalKeyReleased
+
+    private void secaoLocalKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_secaoLocalKeyReleased
+        // TODO add your handling code here:
+        try {
+            int secaoL = Integer.parseInt(secaoLocal.getText());
+        } catch (NumberFormatException e) {
+            secaoLocal.setText("");
+        }
+    }//GEN-LAST:event_secaoLocalKeyReleased
+
+    private void qtdEleitoresLocalKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_qtdEleitoresLocalKeyReleased
+        // TODO add your handling code here:
+        try {
+            int qtdEleitoresL = Integer.parseInt(qtdEleitoresLocal.getText());
+        } catch (NumberFormatException e) {
+            qtdEleitoresLocal.setText("");
+        }
+    }//GEN-LAST:event_qtdEleitoresLocalKeyReleased
 
     /**
      * @param args the command line arguments

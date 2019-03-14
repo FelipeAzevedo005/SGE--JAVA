@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 package view;
-import interfaces.ICadastro;
 /**
  *
  * @author gu_az
  */
-public class CadastrarCompromisso extends javax.swing.JFrame implements ICadastro {
+public class CadastrarCompromisso extends javax.swing.JFrame {
     
     
    
@@ -219,13 +218,4 @@ public class CadastrarCompromisso extends javax.swing.JFrame implements ICadastr
     private javax.swing.JTextField tipoCompromisso;
     // End of variables declaration//GEN-END:variables
 
-    @Override
-    public void cadastrarPessoa() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void limparCampos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

@@ -5,6 +5,9 @@
  */
 package classes.pessoa;
 
+import classes.endereco.Endereco;
+
+
 /**
  *
  * @author felipe
@@ -12,6 +15,12 @@ package classes.pessoa;
 public class Administrador extends Pessoa {
     private String cpf;
     private int numeroCandidatura;
+
+    public Administrador(String nome, String dataNascimento, String telefone, String email, String apelido, Endereco endereco) {
+        super(nome, dataNascimento, telefone, email, apelido, endereco);
+    }
+    
+    
 
     public String getCpf() {
         return cpf;
@@ -46,4 +55,14 @@ public class Administrador extends Pessoa {
     }
     private String cargoPolitico;
     private String senha;
+
+    @Override
+    public void cadastrarDados() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void gerarRelatorio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

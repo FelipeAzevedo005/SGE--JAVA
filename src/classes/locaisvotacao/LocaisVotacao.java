@@ -6,12 +6,13 @@
 package classes.locaisvotacao;
 import classes.endereco.Endereco;
 import classes.dadoseleitorais.DadosEleitorais;
+import interfaces.ICadastro;
         
 /**
  *
  * @author felipe
  */
-public class LocaisVotacao {
+public class LocaisVotacao implements ICadastro{
     private Endereco endereco;
     private DadosEleitorais dadosEleitorais;
     private String nomeLocal;
@@ -47,5 +48,15 @@ public class LocaisVotacao {
 
     public void setQtdEleitores(int qtdEleitores) {
         this.qtdEleitores = qtdEleitores;
+    }
+
+    @Override
+    public void cadastrarDados() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void gerarRelatorio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -37,9 +37,9 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         valorDespesa = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        dataDespesa = new javax.swing.JFormattedTextField();
         limparCampos = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        dataDespesas = new javax.swing.JFormattedTextField();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -64,7 +64,13 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
         descricaoDespesa.setRows(5);
         jScrollPane1.setViewportView(descricaoDespesa);
 
-        jLabel2.setText("CPF ou CNPJ do beneficiário:");
+        jLabel2.setText("CPF ou CNPJ do beneficiário: ");
+
+        cpfCnpjBeneficiario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                cpfCnpjBeneficiarioKeyPressed(evt);
+            }
+        });
 
         jLabel3.setText("Valor:");
 
@@ -79,6 +85,12 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
 
         jButton2.setText("Enviar");
 
+        try {
+            dataDespesas.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -92,23 +104,23 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(valorDespesa, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(limparCampos, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(dataDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel4))))
                             .addComponent(cpfCnpjBeneficiario)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(valorDespesa, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(limparCampos))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(50, 50, 50)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel4)
-                                            .addComponent(dataDespesa, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton2)))))
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(92, 92, 92))))
         );
         layout.setVerticalGroup(
@@ -131,12 +143,12 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(valorDespesa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dataDespesa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dataDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(limparCampos)
                     .addComponent(jButton2))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
         pack();
@@ -147,8 +159,12 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
         descricaoDespesa.setText("");
         cpfCnpjBeneficiario.setText("");
         valorDespesa.setText("");
-        dataDespesa.setText("");
+        dataDespesas.setText("");
     }//GEN-LAST:event_limparCamposActionPerformed
+
+    private void cpfCnpjBeneficiarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cpfCnpjBeneficiarioKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cpfCnpjBeneficiarioKeyPressed
 
     /**
      * @param args the command line arguments
@@ -187,7 +203,7 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField cpfCnpjBeneficiario;
-    private javax.swing.JFormattedTextField dataDespesa;
+    private javax.swing.JFormattedTextField dataDespesas;
     private javax.swing.JTextArea descricaoDespesa;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;

@@ -28,4 +28,14 @@ public class LiderancaPolitica extends Pessoa {
     public void setPontencialVostos(int pontencialVostos) {
         this.pontencialVostos = pontencialVostos;
     }
+
+    @Override
+    public void cadastrarDados() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void gerarRelatorio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

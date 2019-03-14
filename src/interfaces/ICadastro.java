@@ -11,7 +11,7 @@ package interfaces;
  * @author felipe
  */
 public interface ICadastro {
-    void cadastrarPessoa();
-    void limparCampos();
+    void cadastrarDados();
+    void gerarRelatorio();
     
 }

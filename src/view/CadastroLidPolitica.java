@@ -30,7 +30,6 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         apelidoLider = new javax.swing.JTextField();
-        telefoneLider = new javax.swing.JTextField();
         idadeLider = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -39,9 +38,7 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         descricaoLider = new javax.swing.JTextArea();
         jLabel6 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        casaLider = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         nomeLider = new javax.swing.JTextField();
         bairroLider = new javax.swing.JTextField();
@@ -59,6 +56,7 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
         salLider = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         potencialLider = new javax.swing.JTextField();
+        telefoneLider = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -66,6 +64,12 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
         jLabel12.setText("Telefone:");
 
         jLabel3.setText("Idade:");
+
+        idadeLider.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                idadeLiderKeyReleased(evt);
+            }
+        });
 
         jLabel13.setText("Email:");
 
@@ -79,8 +83,6 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Historic", 0, 24)); // NOI18N
         jLabel6.setText("Cadastrar Lideranças Politicas");
-
-        jLabel10.setText("N°:");
 
         jLabel1.setText("Nome:");
 
@@ -97,7 +99,19 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
 
         jLabel5.setText("Seção Eleitoral:");
 
+        secaoLider.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                secaoLiderKeyReleased(evt);
+            }
+        });
+
         jLabel7.setText("Zonal Eleitoral:");
+
+        zonaLider.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                zonaLiderKeyReleased(evt);
+            }
+        });
 
         jLabel8.setText("Filiação Partidária:");
 
@@ -106,6 +120,18 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
         jLabel14.setText("Salário:");
 
         jLabel15.setText("Potêncial de Votos:");
+
+        potencialLider.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                potencialLiderKeyReleased(evt);
+            }
+        });
+
+        try {
+            telefoneLider.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) #####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -116,17 +142,12 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jLabel9)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel10)
-                            .addGap(76, 76, 76))
                         .addComponent(nomeLider)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
                                 .addComponent(apelidoLider, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(6, 6, Short.MAX_VALUE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel3)
@@ -141,7 +162,6 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(salLider)
-                                .addComponent(ruaLider, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
                                 .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(bairroLider, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE))
                             .addGap(51, 51, 51)
@@ -149,14 +169,7 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel12)
                                     .addGap(0, 0, Short.MAX_VALUE))
-                                .addComponent(casaLider)
                                 .addComponent(telefoneLider)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel13)
-                                .addComponent(jLabel6)
-                                .addComponent(jLabel1))
-                            .addGap(3, 3, 3))
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
@@ -178,7 +191,12 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(potencialLider)
-                                        .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))))
+                                        .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                        .addComponent(ruaLider)
+                        .addComponent(jLabel9)
+                        .addComponent(jLabel13)
+                        .addComponent(jLabel6)
+                        .addComponent(jLabel1)))
                 .addGap(120, 120, 120))
         );
         layout.setVerticalGroup(
@@ -217,13 +235,9 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
                     .addComponent(zonaLider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(filiacaoLider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel10))
+                .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ruaLider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(casaLider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(ruaLider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
@@ -261,12 +275,47 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
         zonaLider.setText("");
         filiacaoLider.setText("");
         ruaLider.setText("");
-        casaLider.setText("");
         bairroLider.setText("");
         telefoneLider.setText("");
         salLider.setText("");
         potencialLider.setText("");
     }//GEN-LAST:event_limparCamposActionPerformed
+
+    private void idadeLiderKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idadeLiderKeyReleased
+        // TODO add your handling code here:
+        try {
+            int idadeL = Integer.parseInt(idadeLider.getText());
+        } catch (NumberFormatException e) {
+            idadeLider.setText("");
+        }
+    }//GEN-LAST:event_idadeLiderKeyReleased
+
+    private void secaoLiderKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_secaoLiderKeyReleased
+        // TODO add your handling code here:
+        try {
+            int secaoL = Integer.parseInt(secaoLider.getText());
+        } catch (NumberFormatException e) {
+            secaoLider.setText("");
+        }
+    }//GEN-LAST:event_secaoLiderKeyReleased
+
+    private void zonaLiderKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_zonaLiderKeyReleased
+        // TODO add your handling code here:
+        try {
+            int zonaL = Integer.parseInt(zonaLider.getText());
+        } catch (NumberFormatException e) {
+            zonaLider.setText("");
+        }
+    }//GEN-LAST:event_zonaLiderKeyReleased
+
+    private void potencialLiderKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_potencialLiderKeyReleased
+        // TODO add your handling code here:
+        try {
+            int potencialL = Integer.parseInt(potencialLider.getText());
+        } catch (NumberFormatException e) {
+            potencialLider.setText("");
+        }
+    }//GEN-LAST:event_potencialLiderKeyReleased
 
     /**
      * @param args the command line arguments
@@ -306,14 +355,12 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apelidoLider;
     private javax.swing.JTextField bairroLider;
-    private javax.swing.JTextField casaLider;
     private javax.swing.JTextArea descricaoLider;
     private javax.swing.JTextField emailLider;
     private javax.swing.JTextField filiacaoLider;
     private javax.swing.JTextField idadeLider;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -334,7 +381,7 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
     private javax.swing.JTextField ruaLider;
     private javax.swing.JTextField salLider;
     private javax.swing.JTextField secaoLider;
-    private javax.swing.JTextField telefoneLider;
+    private javax.swing.JFormattedTextField telefoneLider;
     private javax.swing.JTextField zonaLider;
     // End of variables declaration//GEN-END:variables
 }

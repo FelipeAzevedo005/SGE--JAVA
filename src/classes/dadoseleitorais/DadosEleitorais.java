@@ -13,6 +13,11 @@ public class DadosEleitorais {
     private int secaoEleitoral;
     private int zonaEleitoral;
 
+    public DadosEleitorais(int secaoEleitoral, int zonaEleitoral) {
+        this.secaoEleitoral = secaoEleitoral;
+        this.zonaEleitoral = zonaEleitoral;
+    }
+
     public int getSecaoEleitoral() {
         return secaoEleitoral;
     }

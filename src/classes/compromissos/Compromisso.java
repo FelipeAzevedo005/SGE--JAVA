@@ -5,12 +5,13 @@
  */
 package classes.compromissos;
 import  classes.endereco.Endereco;
+import interfaces.ICadastro;
 
 /**
  *
  * @author felipe
  */
-public class Compromisso {
+public class Compromisso implements ICadastro{
     private Endereco endereco;
     private String tipoCompromisso;
     private String descricao;
@@ -46,5 +47,15 @@ public class Compromisso {
 
     public void setResponsavel(String responsavel) {
         this.responsavel = responsavel;
+    }
+
+    @Override
+    public void cadastrarDados() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void gerarRelatorio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

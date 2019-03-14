@@ -5,6 +5,7 @@
  */
 package classes.pessoa;
 import classes.dadoseleitorais.DadosEleitorais;
+import classes.endereco.Endereco;
 
 /**
  *
@@ -12,9 +13,23 @@ import classes.dadoseleitorais.DadosEleitorais;
  */
 public class Apoiador extends Pessoa {
     
+    
+    
     private String descricaoPessoal;
     private String filiacaoPartidaria;
     private DadosEleitorais dadosEleitorais;
+
+    public Apoiador(String nome, String dataNascimento, String telefone, 
+            String email, String apelido, Endereco endereco, 
+            String descricaoPessoal, String filiacaoPartidaria,
+            DadosEleitorais dadosEleitorais) {
+        super(nome, dataNascimento, telefone, email, apelido, endereco);
+        this.descricaoPessoal = descricaoPessoal;
+        this.filiacaoPartidaria = filiacaoPartidaria;
+        this.dadosEleitorais = dadosEleitorais;
+    }
+    
+    
 
     public String getDescricaoPessoal() {
         return descricaoPessoal;
@@ -38,5 +53,15 @@ public class Apoiador extends Pessoa {
 
     public void setDadosEleitorais(DadosEleitorais dadosEleitorais) {
         this.dadosEleitorais = dadosEleitorais;
+    }
+
+    @Override
+    public void cadastrarDados() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void gerarRelatorio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

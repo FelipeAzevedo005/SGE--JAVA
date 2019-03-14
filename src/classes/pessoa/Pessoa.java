@@ -5,14 +5,24 @@
  */
 package classes.pessoa;
 import classes.endereco.Endereco;
+import interfaces.ICadastro;
 
 /**
  *
  * @author felipe
  */
-public abstract class Pessoa {
+public abstract class Pessoa implements ICadastro {
     private String nome;
     private String dataNascimento;
+
+    public Pessoa(String nome, String dataNascimento, String telefone, String email, String apelido, Endereco endereco) {
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.telefone = telefone;
+        this.email = email;
+        this.apelido = apelido;
+        this.endereco = endereco;
+    }
     private String telefone;
     private String email;
     private String apelido;
