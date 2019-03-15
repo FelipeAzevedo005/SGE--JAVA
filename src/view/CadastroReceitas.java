@@ -43,7 +43,7 @@ public class CadastroReceitas extends javax.swing.JFrame {
         setResizable(false);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Historic", 0, 24)); // NOI18N
-        jLabel6.setText("Cadastrar Local de Votação");
+        jLabel6.setText("Cadastrar receita");
 
         jLabel1.setText("Nome do doador:");
 
@@ -68,7 +68,7 @@ public class CadastroReceitas extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(98, 98, 98)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 304, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
                 .addGap(107, 107, 107))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(96, 96, 96)

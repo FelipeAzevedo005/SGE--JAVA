@@ -36,14 +36,19 @@ public class TelaInicial extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
+        listarApoiadores = new javax.swing.JMenuItem();
+        listarLidenranca = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
+        listarLocVotacao = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenu7 = new javax.swing.JMenu();
 
@@ -66,16 +71,16 @@ public class TelaInicial extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(290, 290, 290)
+                .addGap(320, 320, 320)
                 .addComponent(jLabel2)
-                .addContainerGap(346, Short.MAX_VALUE))
+                .addContainerGap(320, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(259, 259, 259)
+                .addGap(325, 325, 325)
                 .addComponent(jLabel2)
-                .addContainerGap(391, Short.MAX_VALUE))
+                .addContainerGap(325, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel3, "card2");
@@ -84,7 +89,7 @@ public class TelaInicial extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 875, Short.MAX_VALUE)
+            .addGap(0, 879, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,6 +123,24 @@ public class TelaInicial extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem2);
 
+        listarApoiadores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user.png"))); // NOI18N
+        listarApoiadores.setText("Listar Apoiadores");
+        listarApoiadores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listarApoiadoresActionPerformed(evt);
+            }
+        });
+        jMenu2.add(listarApoiadores);
+
+        listarLidenranca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user.png"))); // NOI18N
+        listarLidenranca.setText("Listar Liderança Politica");
+        listarLidenranca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listarLidenrancaActionPerformed(evt);
+            }
+        });
+        jMenu2.add(listarLidenranca);
+
         jMenuBar1.add(jMenu2);
 
         jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/book.png"))); // NOI18N
@@ -134,6 +157,11 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/book_open.png"))); // NOI18N
         jMenuItem4.setText("Visualizar agenda");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem4);
 
         jMenuBar1.add(jMenu3);
@@ -149,6 +177,15 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
         jMenu4.add(jMenuItem5);
+
+        listarLocVotacao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/map.png"))); // NOI18N
+        listarLocVotacao.setText("Listar locais de votação");
+        listarLocVotacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listarLocVotacaoActionPerformed(evt);
+            }
+        });
+        jMenu4.add(listarLocVotacao);
 
         jMenuBar1.add(jMenu4);
 
@@ -172,6 +209,24 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
         jMenu5.add(jMenuItem7);
+
+        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/money.png"))); // NOI18N
+        jMenuItem8.setText("Listar receitas");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem8);
+
+        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/money.png"))); // NOI18N
+        jMenuItem9.setText("Listar despesas");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem9);
 
         jMenuBar1.add(jMenu5);
 
@@ -244,6 +299,35 @@ public class TelaInicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_formInputMethodTextChanged
 
+    private void listarApoiadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listarApoiadoresActionPerformed
+        // TODO add your handling code here:
+        new ListarApoiadores().setVisible(true);
+    }//GEN-LAST:event_listarApoiadoresActionPerformed
+
+    private void listarLidenrancaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listarLidenrancaActionPerformed
+        // TODO add your handling code here:
+        new ListarLidPolitica().setVisible(true);
+    }//GEN-LAST:event_listarLidenrancaActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        new ListarAgenda().setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void listarLocVotacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listarLocVotacaoActionPerformed
+        new ListarLocaisVotacao().setVisible(true);
+    }//GEN-LAST:event_listarLocVotacaoActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // TODO add your handling code here:
+        new ListarReceitas().setVisible(true);
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        // TODO add your handling code here:
+        new ListarDespesas().setVisible(true);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -297,8 +381,13 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JMenuItem listarApoiadores;
+    private javax.swing.JMenuItem listarLidenranca;
+    private javax.swing.JMenuItem listarLocVotacao;
     // End of variables declaration//GEN-END:variables
 }

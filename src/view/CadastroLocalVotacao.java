@@ -114,7 +114,7 @@ public class CadastroLocalVotacao extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(111, 111, 111)
+                .addGap(115, 115, 115)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(limparCampos)
@@ -146,7 +146,7 @@ public class CadastroLocalVotacao extends javax.swing.JFrame {
                                     .addComponent(jLabel8)
                                     .addComponent(jLabel5))
                                 .addGap(0, 0, Short.MAX_VALUE)))))
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
