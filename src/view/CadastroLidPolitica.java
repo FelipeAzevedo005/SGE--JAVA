@@ -119,6 +119,12 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
 
         jLabel14.setText("Salário:");
 
+        salLider.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                salLiderKeyReleased(evt);
+            }
+        });
+
         jLabel15.setText("Potêncial de Votos:");
 
         potencialLider.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -316,6 +322,15 @@ public class CadastroLidPolitica extends javax.swing.JFrame {
             potencialLider.setText("");
         }
     }//GEN-LAST:event_potencialLiderKeyReleased
+
+    private void salLiderKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_salLiderKeyReleased
+        // TODO add your handling code here:
+        try {
+            int sal = Integer.parseInt(salLider.getText());
+        } catch (NumberFormatException e) {
+            salLider.setText("");
+        }
+    }//GEN-LAST:event_salLiderKeyReleased
 
     /**
      * @param args the command line arguments

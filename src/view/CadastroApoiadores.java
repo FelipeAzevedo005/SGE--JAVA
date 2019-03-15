@@ -253,6 +253,7 @@ public class CadastroApoiadores extends javax.swing.JFrame {
         filiacaoApoiador.setText("");
         ruaApoiador.setText("");
         bairroApoiador.setText("");
+        telefoneApoiador.setText("");
     }//GEN-LAST:event_limparCamposActionPerformed
 
     private void idadeApoiadorKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idadeApoiadorKeyReleased

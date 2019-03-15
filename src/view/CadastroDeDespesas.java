@@ -67,8 +67,8 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
         jLabel2.setText("CPF ou CNPJ do beneficiário: ");
 
         cpfCnpjBeneficiario.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                cpfCnpjBeneficiarioKeyPressed(evt);
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                cpfCnpjBeneficiarioKeyReleased(evt);
             }
         });
 
@@ -162,9 +162,14 @@ public class CadastroDeDespesas extends javax.swing.JFrame {
         dataDespesas.setText("");
     }//GEN-LAST:event_limparCamposActionPerformed
 
-    private void cpfCnpjBeneficiarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cpfCnpjBeneficiarioKeyPressed
+    private void cpfCnpjBeneficiarioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cpfCnpjBeneficiarioKeyReleased
         // TODO add your handling code here:
-    }//GEN-LAST:event_cpfCnpjBeneficiarioKeyPressed
+        try {
+            int cpfCPJB = Integer.parseInt(cpfCnpjBeneficiario.getText());
+        } catch (NumberFormatException e) {
+            cpfCnpjBeneficiario.setText("");
+        }
+    }//GEN-LAST:event_cpfCnpjBeneficiarioKeyReleased
 
     /**
      * @param args the command line arguments
